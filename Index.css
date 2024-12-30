@@ -1,0 +1,149 @@
+     /* General Styles */
+     body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #333;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #4caf50;
+        margin-bottom: 20px;
+    }
+
+    /* Input Section */
+    .task-input-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    input, select, button {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input {
+        flex: 2;
+    }
+
+    select {
+        flex: 1;
+    }
+
+    button {
+        flex: 1;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    /* Task List */
+    .task-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        border-left: 5px solid #4caf50;
+        border-radius: 5px;
+    }
+
+    .task-item.high {
+        border-left-color: #f44336;
+    }
+
+    .task-item.medium {
+        border-left-color: #ffc107;
+    }
+
+    .task-item.low {
+        border-left-color: #4caf50;
+    }
+
+    .task-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .task-actions button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .complete-btn {
+        background-color: #4caf50;
+        color: white;
+    }
+
+    .delete-btn {
+        background-color: #f44336;
+        color: white;
+    }
+
+    /* Progress Section */
+    .progress-section {
+        margin-top: 20px;
+    }
+
+    .progress-bar {
+        position: relative;
+        height: 20px;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .progress {
+        height: 100%;
+        width: 0;
+        background-color: #4caf50;
+        transition: width 0.3s ease;
+    }
+
+    .progress-text {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #4caf50;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .task-input-section {
+            flex-direction: column;
+        }
+
+        input, select, button {
+            width: 100%;
+        }
+    }
